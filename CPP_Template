@@ -6,3 +6,28 @@ int decToBinary(int n)
     string str = s.substr(loc1);
     return count(str.begin(), str.end(), '1');
 }
+
+//Binary to Decimal
+void binaryToDecimal(int m)
+{
+    vector<int> vect;
+    while (m / 10 != 0)
+    {
+        vect.insert(vect.begin(), m % 10);
+        m /= 10;
+    }
+    vect.insert(vect.begin(), m % 10);
+    int temp = 0;
+    for (int i = 0; i < vect.size(); i++)
+    {
+        if (i == 0)
+        {
+            temp = vect[i];
+        }
+        else
+        {
+            temp = temp * 2 + vect[i];
+        }
+    }
+    cout << temp;
+}
