@@ -50,3 +50,39 @@ void print(vector<int> vect)
         cout << vect[i] << " ";
     }
 }
+
+//Count for maximum occurance of a number
+int majority(int a[], int size)
+{
+    int i = 0, count = 1, max_count = 1, num = 0;
+    sort(a, a + size);
+    while (i != size)
+    {
+        if (size == 1)
+        {
+            return a[i];
+        }
+        if (a[i] == a[i+1])
+        {
+            count++;
+        }
+        else
+        {
+            if (count > max_count)
+            {
+                max_count = count;
+                num = a[i];
+            }
+            count = 1;
+        }
+        i++;
+    }
+    if (max_count > (size/2))
+    {
+        return num;
+    }
+    else
+    {
+        return -1;
+    }
+}
