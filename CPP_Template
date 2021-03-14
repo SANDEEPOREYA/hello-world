@@ -1,3 +1,11 @@
+//Basic Template
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+
+}
+
 //Decimal to Binary
 int decToBinary(int n)
 {
