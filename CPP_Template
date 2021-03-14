@@ -86,3 +86,20 @@ int majority(int a[], int size)
         return -1;
     }
 }
+
+//taking muliple input at the same time
+int t = 0;
+cin >> t;
+int arr[t][2];
+int arr1[t][10];
+for (int i = 0; i < t; i++)
+{
+    for (int k = 0; k < 2; k++)
+    {
+        cin >> arr[i][k];
+    }
+    for (int j = 0; j < arr[i][0]; j++)
+    {
+        cin >> arr1[i][j];
+    }
+}
